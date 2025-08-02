@@ -47,4 +47,5 @@ def result():
     return render_template('result.html', prediction_text=prediction, is_approved=is_approved)
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    #app.run(debug=False)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)),debug=False)
